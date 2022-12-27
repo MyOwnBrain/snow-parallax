@@ -1,0 +1,96 @@
+:root {
+    font-size: 16px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    user-select: none;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+}
+
+.background {
+    transform-origin: bottom center;
+    position: absolute;
+    width: 120%;
+    height: 100%;
+    background-image: url(image/background.jpg);
+    background-size: cover;
+}
+
+.snow {
+    position: absolute;
+    height: 120%;
+    width: 120%;
+    scale: 1.1;
+}
+
+.snow div {
+    position: absolute;
+    height: 200%;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    background-size: cover;
+}
+
+.layer1 {
+    background-image: url(image/Snow1.png);
+    animation: snowfall infinite linear 7s, wiggle 2s infinite ease-in-out;
+    opacity: 0.5;
+}
+
+.layer2 {
+    background-image: url(image/Snow2.png);
+    animation: snowfall infinite linear 5s, wiggle 1.5s infinite ease-in-out;
+    opacity: 0.75;
+}
+
+.layer3 {
+    background-image: url(image/Snow3.png);
+    animation: snowfall infinite linear 3s, wiggle 1s infinite ease-in-out;
+    opacity: 1;
+}
+
+@keyframes snowfall {
+    0% {
+        bottom: 0;
+    }
+
+    100% {
+        bottom: -100%;
+    }
+}
+
+@keyframes wiggle {
+    0% {
+        left: 0;
+    }
+
+    50% {
+        left: 5rem;
+    }
+
+    100% {
+        left: 0;
+    }
+}
+
+.trees {
+    position: absolute;
+    width: 110%;
+    bottom: 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.tree {
+    scale: 2;
+}
